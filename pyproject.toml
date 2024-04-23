@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "stripe-sessions"
+version = "0.1.0"
+description = ""
+authors = ["Collin Dutter <collin@griptape.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.1"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+stripe = "^9.2.0"
+griptape = {path = "../griptape", develop = true, extras=["all"]}
+proxycurl-client = {git = "https://github.com/griptape-ai/proxycurl-client-tool.git", rev = "main"}
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
